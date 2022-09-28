@@ -11,7 +11,7 @@
 
 
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
-	<title>LifeBlog | Home </title>
+	<title>Random Team Blog| Home </title>
 </head>
 <body>
 	<!-- container - wraps whole page -->
@@ -26,7 +26,7 @@
 
 		<!-- Page content -->
 		<div class="content">
-			<h2 class="content-title">Recent Articles</h2>
+			<h2 class="content-title">Recent Posts</h2>
 			<hr>
 			<!-- more content still to come here ... -->
 			
