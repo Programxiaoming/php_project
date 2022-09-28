@@ -36,8 +36,10 @@
 		<div class="buttons">
 			<a href="edit_users.php">Edit Users</a>
 			<a href="edit_posts.php">Edit Posts</a>
+			<br>
 			<a href="delete_users.php">Delete Users</a>
 			<a href="delete_posts.php">Delete Posts</a>
+			<br>
 			<a href="read_users.php">List Users</a>
 			<a href="read_posts.php">List Posts</a>
 		</div>
