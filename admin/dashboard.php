@@ -1,6 +1,5 @@
 <?php  include('../config.php'); ?>
-	<?php include(ROOT_PATH . '/admin/includes/admin_functions.php'); ?>
-	<?php include(ROOT_PATH . '/admin/includes/head_section.php'); ?>
+
 	<title>Admin | Dashboard</title>
 </head>
 <body>
@@ -20,23 +19,27 @@
 	<div class="container dashboard">
 		<h1>Welcome</h1>
 		<div class="stats">
-			<a href="users.php" class="first">
-				<span>43</span> <br>
-				<span>Newly registered users</span>
+			<a href="create_posts.php" class="first">
+				<span>10</span> <br>
+				<span>New Posts</span>
 			</a>
-			<a href="posts.php">
-				<span>43</span> <br>
-				<span>Published posts</span>
+			<a href="create_topics.php">
+				<span>10</span> <br>
+				<span>New Topics</span>
 			</a>
 			<a>
-				<span>43</span> <br>
+				<span>10</span> <br>
 				<span>Published comments</span>
 			</a>
 		</div>
 		<br><br><br>
 		<div class="buttons">
-			<a href="users.php">Add Users</a>
-			<a href="posts.php">Add Posts</a>
+			<a href="edit_users.php">Edit Users</a>
+			<a href="edit_posts.php">Edit Posts</a>
+			<a href="delete_users.php">Delete Users</a>
+			<a href="delete_posts.php">Delete Posts</a>
+			<a href="read_users.php">List Users</a>
+			<a href="read_posts.php">List Posts</a>
 		</div>
 	</div>
 </body>
