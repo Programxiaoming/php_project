@@ -16,7 +16,7 @@ $row = mysqli_fetch_assoc($result);
 <body>
 <div class="form">
 <p>
-| <a href="create.php">Insert New posts</a> 
+| <a href="create_posts.php">Insert New posts</a> 
 | <a href="logout.php">Logout</a></p>
 <h1>Update posts</h1>
 <?php

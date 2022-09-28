@@ -18,6 +18,7 @@ include "../config.php"
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>
 <tr>
+          <th><strong>No</strong></th>
           <th  scope="col" >ID</th>
           <th  scope="col">name</th>
           <th  scope="col"> Slug</th>
