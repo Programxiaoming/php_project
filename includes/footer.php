@@ -1,5 +1,5 @@
 <div class="footer">
-			<p>PHP Random Team &copy; <?php echo date('Y'); ?></p>
+			<p>FSD05 Web Development Random Team &copy; <?php echo date('Y'); ?></p>
 		</div>
 		<!-- // footer -->
 

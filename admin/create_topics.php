@@ -40,6 +40,6 @@
  
    <!-- a BACK button to go to the home page -->
   <div class="container text-center mt-5">
-    <a href="index_login.php" class="btn btn-warning mt-5"> Back to homepage </a>
+    <a href="../index.php" class="btn btn-warning mt-5"> Back to homepage </a>
   <div>
  

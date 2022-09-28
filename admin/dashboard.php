@@ -5,8 +5,8 @@
 <body>
 	<div class="header">
 		<div class="logo">
-			<a href="<?php echo BASE_URL .'admin/dashboard.php' ?>">
-				<h1>PHP blog</h1>
+			<a href="<?php echo BASE_URL .'index.php' ?>">
+				<h1>Random Team Blog - Home</h1>
 			</a>
 		</div>
 		<?php if (isset($_SESSION['user'])): ?>
@@ -27,10 +27,7 @@
 				<span>10</span> <br>
 				<span>New Topics</span>
 			</a>
-			<a>
-				<span>10</span> <br>
-				<span>Published comments</span>
-			</a>
+
 		</div>
 		<br><br><br>
 		<div class="buttons">
