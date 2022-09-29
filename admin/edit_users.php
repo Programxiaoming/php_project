@@ -20,8 +20,6 @@ $row = mysqli_fetch_assoc($result);
 <title>Update users</title>
 </head>
 <body>
-<div class="form">
-<h1>Update users</h1>
 <?php
 $status = "";
 $usernameErr = $emailErr = $passwordErr = $retypedErr = $roleErr= "";
@@ -82,19 +80,22 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 }else {
 ?>
 
-<div>
+
+<h1 class="post_header">Update users</h1>
+<div class="post">
 <form name="form"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" > 
+
 <input type="hidden" name="new" value="1" />
 
 <input name="id" type="hidden" value="<?php echo $row['id'];?>" />
 
 <input name="created_at" type="hidden" value="<?php echo $row['created_at'];?>" />
 
-<p><input type="text" name="username" placeholder="Enter username" 
+<p>Username: <input type="text" name="username" placeholder="Enter username" 
 required value="<?php echo $row['username'];?>" /></p>
 <span class="error"> <?php echo $usernameErr; ?></span>
 
-<p><input type="email" name="email" placeholder="Enter email" 
+<p>Your Email: <input type="email" name="email" placeholder="Enter email" 
 required value="<?php echo $row['email'];?>" /></p>
 <span class="error"> <?php echo $emailErr; ?></span>
 
@@ -118,8 +119,10 @@ required/></p>
 required value="</?php echo $row['updated_at'];?>" /></p> -->
 
 
-<p><input name="submit" type="submit" value="Update" /></p>
+<div class="btn_sub"><input name="submit" type="submit" value="Update" /></div>
 </form>
-<?php } ?>
 </div>
+<?php } ?>
+
+
 <?php include( ROOT_PATH . '/includes/footer.php') ?>

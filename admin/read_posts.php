@@ -10,11 +10,7 @@ include "../config.php"
 </head>
 <body>
 <div class="form">
-<p>
-<a href="dashboard.php"> Dashboard</a> | 
-<a href="../index.php">Home</a> |   
-<a href="create_posts.php">Insert New Post</a> 
-| <a href="../logout.php">Logout</a></p>
+
 <h2>View Posts</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>

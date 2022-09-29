@@ -20,9 +20,9 @@ if (!is_numeric($id) || $id < 1) {
 </head>
 
 <body>
-<div class="form">
-<h1>Update posts</h1>
+<h1 class="post_header">Update posts</h1>
 <?php
+$userErr = $titleErr = $viewsErr = $slugErr  = $bodyErr = $publishedErr =  "";
 $status = "";
 if(isset($_POST['new']) && $_POST['new']==1)
 {
@@ -83,12 +83,13 @@ slug='" . $slug . "', views='" . $views . "', image='" . $image . "', body='" . 
                 echo "<p>Error when editing post<p>";
             }
         } else {
-            echo "please fill the form out properly";
+            echo " ";
         }
 
         ?>
 
-        <div>
+
+        <div class="post">
             <form name="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                 <input type="hidden" name="new" value="1" />
 
@@ -98,30 +99,31 @@ slug='" . $slug . "', views='" . $views . "', image='" . $image . "', body='" . 
                 <!-- the user_id should be hidden -->
                 <p><input type="hidden" name="user_id" placeholder="Enter user_id" required value="<?php echo $row['user_id']; ?>" /></p>
 
-                <p><input type="text" name="title" placeholder="Enter title" required value="<?php echo $row['title']; ?>" /></p>
+                <p>Post Title: </Title><input type="text" name="title" placeholder="Enter title" required value="<?php echo $row['title']; ?>" /></p>
                 <span class="error"> <?php echo $titleErr; ?></span><br>
 
-                <p><input type="text" name="slug" placeholder="Enter slug" required value="<?php echo $row['slug']; ?>" /></p>
+                <p>Post Slug: <input type="text" name="slug" placeholder="Enter slug" required value="<?php echo $row['slug']; ?>" /></p>
                 <span class="error"> <?php echo $slugErr; ?></span><br>
 
-
-                <p><input type="number" name="views" placeholder="Enter views" required value="<?php echo $row['views']; ?>" /></p>
+                <p>Views Number: <input type="number" name="views" placeholder="Enter views" required value="<?php echo $row['views']; ?>" /></p>
                 <span class="error"> <?php echo $viewsErr; ?></span><br>
 
                 <input type="hidden" name="MAX_FILE_SIZE" value="2048000" />
                 <p><input type="file" name="image" placeholder="Enter image" accept="image/x-png,image/gif,image/jpeg" required value="<?php echo $row['image']; ?>" /></p>
 
-                <p><input type="text" name="body" placeholder="Enter body" required value="<?php echo $row['body']; ?>" /></p>
+                <div class="post_body">
+                <p><input type="text" name="body" placeholder="Enter body" style="border-style:none" required value="<?php echo $row['body']; ?>" /></p>
                 <span class="error"> <?php echo $bodyErr; ?></span><br>
-
+                </div>
                 <p><input type="number" name="published" placeholder="Enter published" required value="<?php echo $row['published']; ?>" /></p>
                 <span class="error"> <?php echo $publishedErr; ?></span><br>
 
                 <!-- <p><input type="text" name="updated_at" placeholder="Enter updated_at" 
 required value="</?php echo $row['updated_at'];?>" /></p> -->
 
-
+                <div class="btn_sub">
                 <p><input name="submit" type="submit" value="Update" /></p>
+                </div>
             </form>
             <?php  ?>
         </div>

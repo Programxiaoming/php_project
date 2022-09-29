@@ -16,7 +16,7 @@ if (isset($_POST['name'])) {
 
   $slug = test_input($_REQUEST["slug"]);
   $slug = mysqli_real_escape_string($conn, $slug);
-  if (!preg_match("/^[a-zA-Z._-]{2,200}$/", $slug)) {
+  if (!preg_match("/^[a-zA-Z_-]{2,200}$/", $slug)) {
     $slugErr = "slug must be between 2 and 200 characters with letters, dots, underscores and dashes accepted";
   }
 
@@ -52,14 +52,14 @@ function test_input($data)
 </head>
 
 <body>
-<h1 class="post_header">Add Topic </h1>
+<h1 class="post_header">Create New Topic </h1>
   <div class="post">
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-
-    <p><input type="text" name="slug" placeholder="Slug" required /></p>
+    <p><input type="text" name="name" placeholder="Topic name" required /></p>
+    <p><input type="text" name="slug" placeholder="Post slug" required /></p>
     <span class="error"> <?php echo $slugErr; ?></span><br>
         <div class="btn_sub">
-    <p><input name="submit" type="submit" value="Submit" /></p>
+    <p><input name="submit" type="submit" value="Create" /></p>
       </div>
     </form> 
  

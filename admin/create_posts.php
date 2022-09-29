@@ -24,7 +24,7 @@ if (isset($_POST['user_id'])) {
 
     $slug = stripslashes($_REQUEST["slug"]);
     $slug = mysqli_real_escape_string($conn, $slug);
-    if (!preg_match("/^[a-zA-Z ._-]{2,200}$/", $slug)) {
+    if (!preg_match("/^[a-zA-Z _-]{2,200}$/", $slug)) {
       $slugErr = "slug must be between 2 and 200 characters with letters, dots, spaces, underscores and dashes accepted";
     }
 
@@ -72,8 +72,8 @@ if (isset($_POST['user_id'])) {
 
 ?>
 
-<h1 class="text-center">Add Post details </h1>
-<div class="container">
+<h1 class="post_header">Create new post </h1>
+<div class="post">
 
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
@@ -91,21 +91,20 @@ if (isset($_POST['user_id'])) {
 
     <input type="hidden" name="MAX_FILE_SIZE" value="2048000" />
     <p><input type="file" name="image" placeholder="Enter image" accept="image/x-png,image/gif,image/jpeg" required /></p>
-
-    <p><input type="text" name="body" placeholder="Body" required /></p>
+    <div class="post_body">
+    <p><input type="text" name="body" placeholder="Body" style="border-style:none" required/></p>
     <span class="error"> <?php echo $bodyErr; ?></span><br>
-
+    </div>
     <p><input type="number" name="published" placeholder="Published" maxlength="1" required /></p>
     <span class="error"> <?php echo $publishedErr; ?></span><br>
-
+    <div class="btn_sub">
     <p><input name="submit" type="submit" value="Submit" /></p>
-
+    </div>
   </form>
 </div>
 
-<!-- a BACK button to go to the home page -->
-<div class="container text-center mt-5">
-  <a href="../index.php" class="btn btn-warning mt-5"> Back to homepage </a>
+<div>
+ 
   <div>
 
     <?php include(ROOT_PATH . '/includes/footer.php') ?>

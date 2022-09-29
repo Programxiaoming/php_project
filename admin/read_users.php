@@ -12,11 +12,7 @@ include "../config.php"
 <div class="form">
 
 <!-- fixed these as they were not working  -->
-<p>
-  <!-- added href back to dashboard so that user doesn't get lost !-->
-<a href="dashboard.php"> Dashboard</a>  |
-<a href="../index.php">Home</a> 
-| <a href="../logout.php">Logout</a></p>
+
 <h2>Users List</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>

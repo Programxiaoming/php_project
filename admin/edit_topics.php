@@ -17,12 +17,7 @@ $row = mysqli_fetch_assoc($result);
 <title>Update Topic</title>
 </head>
 <body>
-<div class="form">
-<p>
-<a href="read_topics.php">View Topics</a> 
-| <a href="create_topics.php">Insert New Topics</a> 
-| <a href="logout.php">Logout</a></p>
-<h1>Update Topic</h1>
+
 <?php
 $status = $nameErr = $slugErr = "";
 if(isset($_POST['new']) && $_POST['new']==1)
@@ -57,21 +52,23 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 }
 ?>
 
-<div>
+<h1 class="post_header">Update Topic</h1>
+<div class="post">
 <form name="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"> 
 <input type="hidden" name="new" value="1" />
 
 <p><input name="id" type="hidden" value="<?php echo $row['id'];?>" />
 
-<p><input type="text" name="name" placeholder="Enter name" 
+<p>Topic Name: <input type="text" name="name" placeholder="Enter name" 
 required value="<?php echo $row['name'];?>" /></p>
 <span class="error"> <?php echo $nameErr; ?></span><br>
 
-<p><input type="text" name="slug" placeholder="Enter slug" 
+<p>Post Slug: <input type="text" name="slug" placeholder="Enter slug" 
 required value="<?php echo $row['slug'];?>" /></p>
 <span class="error"> <?php echo $slugErr; ?></span><br>
-
+<div class="btn_sub">
 <p><input name="submit" type="submit" value="Update" /></p>
+</div>
 </form>
 <?php  ?>
 </div>
