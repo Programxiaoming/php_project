@@ -53,7 +53,7 @@ $status = "Topics Updated Successfully. </br></br>
 <a href='read_topics.php'>View Updated topics</a>";
 echo '<p style="color:#FF0000;">'.$status.'</p>';
 }
-}else {
+}
 ?>
 
 <div>
@@ -72,6 +72,6 @@ required value="<?php echo $row['slug'];?>" /></p>
 
 <p><input name="submit" type="submit" value="Update" /></p>
 </form>
-<?php } ?>
+<?php  ?>
 </div>
 <?php include( ROOT_PATH . '/includes/footer.php') ?>
