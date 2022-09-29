@@ -1,7 +1,7 @@
 <!-- Header -->
  <?php  include "../config.php" ?> 
 
-		<!-- // navbar -->
+	
 
 <?php 
   if(isset($_POST['user_id'])) 
