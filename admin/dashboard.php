@@ -1,5 +1,5 @@
 <?php  include('../config.php'); ?>
-<link rel="stylesheet" href="../static/css/public_styling.css">
+<link rel="stylesheet" href="css/admin_styling.css">
 <?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 	
 <title>Admin | Dashboard</title>
 </head>
@@ -12,8 +12,8 @@
 			</div>
 		<?php endif ?>
 	</div>
-	<div class="container dashboard">
-		<h1>Welcome</h1>
+	<div class="dashboard">
+		<h1>Dashboard</h1>
 		<div class="stats">
 			<a href="create_posts.php" class="first">
 				 <br>
@@ -23,11 +23,13 @@
 				<br>
 				<span>New Topic</span>
 			</a>
-
-		</div>
-		<br><br><br>
-		<div class="buttons">
-			<a href="read_users.php">List Users</a>
-			<a href="read_posts.php">List Posts</a>
+			<a href="read_users.php">
+				<br>
+				<span>List Users</span>
+			</a>
+			<a href="read_posts.php">
+				<br>
+				<span>List Posts</span>
+			</a>
 		</div>
 <?php include( ROOT_PATH . '/includes/footer.php') ?>

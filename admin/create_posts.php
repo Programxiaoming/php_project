@@ -2,7 +2,7 @@
  <?php  include "../config.php" ?> 
 <!-- improved the doc by including the header.php file -->
 <?php require_once( ROOT_PATH . '/includes/header.php') ?>
-<link rel="stylesheet" href="../static/css/public_styling.css">
+<link rel="stylesheet" href="css/admin_styling.css">
 <?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 	
 <?php 
   if(isset($_POST['user_id'])) 
