@@ -1,36 +1,46 @@
-<!-- The first include should be config.php -->
 <?php require_once('config.php') ?>
-<!-- config.php should be here as the first include  -->
 
 <?php require_once( ROOT_PATH . '/includes/public_functions.php') ?>
 
 <?php require_once( ROOT_PATH . '/includes/registration_login.php') ?>
 
-<!-- Retrieve all posts from database  -->
 <?php $posts = getPublishedPosts(); ?>
 
 
-<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
-	<title>Random Team Blog| Home </title>
-</head>
-<body>
-	<!-- container - wraps whole page -->
-	<div class="container">
-		<!-- navbar -->
-		<?php include( ROOT_PATH . '/includes/navbar.php') ?>
-		<!-- // navbar -->
+	<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+		<title>Random Team Blog| Home </title>
+	</head>
+	<body>
 
-		<!-- banner -->
-		<?php include( ROOT_PATH . '/includes/banner.php') ?>
-		<!-- // banner -->
+		<div class="container">
 
-		<!-- Page content -->
+			<?php include( ROOT_PATH . '/includes/navbar.php') ?>
+			<?php if (isset($_SESSION['user']['username'])) { ?>
+		<div class="logged_in_info">
+			<span>welcome <?php echo $_SESSION['user']['username'] ?></span>
+			|
+			<span><a href="logout.php">logout</a></span>
+		</div>
+	<?php }else{ ?>
+
+
+
+	<div class="login_div">
+		<form action="index.php" method="post" >
+			<h2>Login</h2>
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password"  placeholder="Password"> 
+			<button class="btn" type="submit" name="login_btn">Sign in</button>
+			<a href="register.php" class="btn">register here!</a>
+
+		</form>
+	</div>
+
+<?php } ?>
 		<div class="content">
 			<h2 class="content-title">Recent Posts</h2>
 			<hr>
-			<!-- more content still to come here ... -->
 			
-			<!-- Add this ... -->
 		<?php foreach ($posts as $post): ?>
 			<div class="post" style="margin-left: 0px;">
 			<img src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="">
@@ -55,8 +65,4 @@
 		</div>
 		<?php endforeach ?>
 	</div>
-		<!-- // Page content -->
-
-		<!-- footer -->
 		<?php include( ROOT_PATH . '/includes/footer.php') ?>
-		<!-- // footer -->

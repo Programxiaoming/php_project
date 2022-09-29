@@ -1,6 +1,6 @@
 <!-- Header -->
  <?php  include "../config.php" ?> 
- <?php include( ROOT_PATH . '/includes/navbar.php') ?>
+
 		<!-- // navbar -->
 
 <?php 
