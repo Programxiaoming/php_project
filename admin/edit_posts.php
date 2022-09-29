@@ -11,14 +11,11 @@ $row = mysqli_fetch_assoc($result);
 <head>
 <meta charset="utf-8">
 <title>Update Posts</title>
-<link rel="stylesheet" href="../static/css/public_styling.css"> 
+<link rel="stylesheet" href="css/admin_styling.css">
 <?php include( ROOT_PATH . '/admin/nav_admin.php'); ?>
 </head>
 <body>
 <div class="form">
-<p>
-| <a href="create_posts.php">Insert New posts</a> 
-| <a href="logout.php">Logout</a></p>
 <h1>Update posts</h1>
 <?php
 $status = "";

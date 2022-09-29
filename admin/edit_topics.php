@@ -12,15 +12,13 @@ $row = mysqli_fetch_assoc($result);
 }
 ?>
 <?php require_once( ROOT_PATH . '/includes/header.php') ?>
-<link rel="stylesheet" href="../static/css/public_styling.css">
+<link rel="stylesheet" href="css/admin_styling.css">
 <?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 
 <title>Update Topic</title>
 </head>
 <body>
 <div class="form">
-<p>
-| <a href="create_topics.php">Insert New Topics</a> 
-| <a href="logout.php">Logout</a></p>
+
 <h1>Update Topic</h1>
 <?php
 $status = $nameErr = $slugErr = "";

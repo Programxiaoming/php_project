@@ -36,8 +36,8 @@
     }
 ?>
  
-<h1 class="text-center">Add Post details </h1>
-  <div class="container">
+<h1 class="post_header">Create a new post </h1>
+  <div class="post">
 
     <form action="" method="post">
     
@@ -51,18 +51,15 @@
 
     <p><input type="text" name="image" placeholder="Image" required /></p>
 
-    <p><input type="text" name="body" placeholder="Body" required /></p>
-
+    <div class="post_body">
+    <p><input type="text" name="body" style="border-style:none" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec finibus mauris..." required /></p>
+    </div>
     <p><input type="tinyint" name="published" placeholder="Published" required /></p>
-
-    <p><input name="submit" type="submit" value="Submit" /></p>
-
+    <div class="btn_sub">
+    <p><input name="submit" type="submit" value="Create" /></p>
+    </div>
     </form> 
   </div>
  
-   <!-- a BACK button to go to the home page -->
-  <div class="container text-center mt-5">
-    <a href="../index.php" class="btn btn-warning mt-5"> Back to homepage </a>
-  <div>
  
   <?php include( ROOT_PATH . '/includes/footer.php') ?>

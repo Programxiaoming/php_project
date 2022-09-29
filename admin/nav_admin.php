@@ -7,6 +7,6 @@
 			  <li><a class="active" href="../index.php">Home</a></li>
 			  <li><a href="create_posts.php">Create</a></li>
 			  <li><a href="dashboard.php">Admin</a></li>
-			  <li><a href="../includes/about.php">About</a></li>
+			  <li><a href="../logout.php">Logout</a></li>
 			</ul>
 		</div>

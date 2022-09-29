@@ -47,20 +47,13 @@ if (!preg_match("/^[a-zA-Z._-]{2,200}$/", $slug)) {
 ?>
 <!-- added html tag and title -->
  <?php require_once( ROOT_PATH . '/includes/header.php') ?>
- <link rel="stylesheet" href="../static/css/public_styling.css">
+ <link rel="stylesheet" href="css/admin_styling.css">
  <?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 	 	
 <title>Add Topic </title>
 </head>
 <body>
-<div class="form">
-<p>
-<a href="dashboard.php"> Dashboard</a> | 
-<a href="../index.php">Home</a> |   
-<a href="read_topics.php">View Topics</a> 
-| <a href="../logout.php">Logout</a></p>
-</div>
-<h1 class="text-center">Add Topic </h1>
-  <div class="container">
+<h1 class="post_header">Add Topic </h1>
+  <div class="post">
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
     
     <p><input type="text" name="name" placeholder="Name" required /></p>
@@ -68,9 +61,9 @@ if (!preg_match("/^[a-zA-Z._-]{2,200}$/", $slug)) {
 
     <p><input type="text" name="slug" placeholder="Slug" required /></p>
     <span class="error"> <?php echo $slugErr; ?></span><br>
-
+        <div class="btn_sub">
     <p><input name="submit" type="submit" value="Submit" /></p>
-
+      </div>
     </form> 
  
   <!-- Sorry this is inconsistent with the other pages so I put at the top instead --> 
