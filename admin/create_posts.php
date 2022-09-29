@@ -108,18 +108,3 @@ if (isset($_POST['user_id'])) {
  
  
   <?php include( ROOT_PATH . '/includes/footer.php') ?>
-
-    <span class="error"> <?php echo $publishedErr; ?></span><br>
-
-    <p><input name="submit" type="submit" value="Submit" /></p>
-
-  </form>
-</div>
-
-<!-- a BACK button to go to the home page -->
-<div class="container text-center mt-5">
-  <a href="../index.php" class="btn btn-warning mt-5"> Back to homepage </a>
-  <div>
-
-    <?php include(ROOT_PATH . '/includes/footer.php') ?>
->>>>>>> 000751578fe401eb2c0d9f466d6a00659355ebf7
