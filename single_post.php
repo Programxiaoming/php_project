@@ -6,7 +6,7 @@
 	}
 	$topics = getAllTopics();
 ?>
-<?php include('includes/head_section.php'); ?>
+<link rel="stylesheet" href="static/css/public_styling.css">
 <title> <?php echo $post['title'] ?> | LifeBlog</title>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <?php  include('config.php'); ?>
 <?php  include('includes/registration_login.php'); ?>
-<?php  include('includes/head_section.php'); ?>
-	<title>PHP | Sign in </title>
+<link rel="stylesheet" href="static/css/public_styling.css">
+<title>PHP | Sign in </title>
 </head>
 <body>
 <div class="container">
