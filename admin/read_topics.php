@@ -2,19 +2,19 @@
 <?php
 include "../config.php"
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>topics Details</title>
-<link rel="stylesheet" href="css/style.css" />
+<!-- improved the doc by including the head_section file -->
+<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+<title>View Topics</title>
 </head>
 <body>
 <div class="form">
-<p><a href="index.php">Home</a> 
-| <a href="create_topics.php">Insert New topics</a> 
-| <a href="logout.php">Logout</a></p>
-<h2>View topics</h2>
+<p>
+<a href="dashboard.php"> Dashboard</a> | 
+<a href="../index.php">Home</a> |   
+<a href="create_topics.php">Insert New Topics</a> 
+| <a href="../logout.php">Logout</a></p>
+
+<h2>View Topics</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>
 <tr>
@@ -22,6 +22,8 @@ include "../config.php"
           <th  scope="col" >ID</th>
           <th  scope="col">name</th>
           <th  scope="col"> Slug</th>
+          <th  scope="col">Edit</th>
+          <th  scope="col">Delete</th>
 
 
         </tr> 

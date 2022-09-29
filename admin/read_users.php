@@ -28,6 +28,8 @@ include "../config.php"
           <th  scope="col">password</th> -->
           <th  scope="col">Created_at</th>
           <th  scope="col">Updated_at</th>
+          <th  scope="col">Edit</th>
+          <th  scope="col">Delete</th>
         </tr> 
 </thead>
 <tbody>
