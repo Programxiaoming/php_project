@@ -7,7 +7,7 @@
 <?php $posts = getPublishedPosts(); ?>
 
 
-		<link rel="stylesheet" href="static/css/public_styling.css">
+<?php require_once('includes/header.php') ?>
 		<title>Random Team Blog| Home </title>
 	</head>
 	<body>

@@ -2,7 +2,7 @@
 <!-- Source code for handling registration and login -->
 <?php  include('includes/registration_login.php'); ?>
 
-<link rel="stylesheet" href="static/css/public_styling.css">
+<?php require_once('includes/header.php') ?>
 
 <title>PHP blog | Sign up </title>
 </head>

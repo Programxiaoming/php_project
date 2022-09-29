@@ -1,6 +1,6 @@
 <?php include('config.php'); ?>
 <?php include('includes/public_functions.php'); ?>
-<link rel="stylesheet" href="static/css/public_styling.css">
+<?php require_once('includes/header.php') ?>
 <?php 
 	// Get posts under a particular topic
 	if (isset($_GET['topic'])) {

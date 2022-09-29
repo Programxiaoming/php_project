@@ -1,6 +1,6 @@
 <?php  include('config.php'); ?>
 <?php  include('includes/registration_login.php'); ?>
-<link rel="stylesheet" href="static/css/public_styling.css">
+<?php require_once('includes/header.php') ?>
 <title>PHP | Sign in </title>
 </head>
 <body>
