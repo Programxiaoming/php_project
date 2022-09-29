@@ -57,17 +57,18 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 ?>
 
 <div>
-<form name="form" method="post" action=""> 
+<form name="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"> 
 <input type="hidden" name="new" value="1" />
 
 <p><input name="id" type="hidden" value="<?php echo $row['id'];?>" />
 
 <p><input type="text" name="name" placeholder="Enter name" 
 required value="<?php echo $row['name'];?>" /></p>
+<span class="error"> <?php echo $nameErr; ?></span><br>
 
 <p><input type="text" name="slug" placeholder="Enter slug" 
 required value="<?php echo $row['slug'];?>" /></p>
-
+<span class="error"> <?php echo $slugErr; ?></span><br>
 
 <p><input name="submit" type="submit" value="Update" /></p>
 </form>
