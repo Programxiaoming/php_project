@@ -46,19 +46,19 @@ if(isset($_POST['new']) && $_POST['new']==1)
                     $emailErr = "Invalid email";
           }
 
-         $password = stripslashes($_REQUEST["password"]);
-        $password = mysqli_real_escape_string($conn, $password);
-         //password must be at least 7 characters, with one uppercase, one lower case, and one number OR special character. 
-         if (!preg_match("/(?-i)(?=^.{7,}$)((?!.*\s)(?=.*[A-Z])(?=.*[a-z]))((?=(.*\d){1,})|(?=(.*\W){1,}))^.*$/", $password)) {
-                $passwordErr = "Password should be at least 7 characters, with one uppercase, one lower case, and at least one number OR special character ";
-                }
+        //  $password = stripslashes($_REQUEST["password"]);
+        // $password = mysqli_real_escape_string($conn, $password);
+        //  //password must be at least 7 characters, with one uppercase, one lower case, and one number OR special character. 
+        //  if (!preg_match("/(?-i)(?=^.{7,}$)((?!.*\s)(?=.*[A-Z])(?=.*[a-z]))((?=(.*\d){1,})|(?=(.*\W){1,}))^.*$/", $password)) {
+        //         $passwordErr = "Password should be at least 7 characters, with one uppercase, one lower case, and at least one number OR special character ";
+        //         }
 
-        $retyped = stripslashes($_REQUEST["retyped"]);
-        $retyped = mysqli_real_escape_string($conn, $retyped);
-                //email can be any word character, dash, or underscore with @ and . word characters
-                if (strcmp($password, $retyped) !== 0) {
-                        $retypedErr = "Passwords must match";
-                }
+        // $retyped = stripslashes($_REQUEST["retyped"]);
+        // $retyped = mysqli_real_escape_string($conn, $retyped);
+        //         //email can be any word character, dash, or underscore with @ and . word characters
+        //         if (strcmp($password, $retyped) !== 0) {
+        //                 $retypedErr = "Passwords must match";
+                
         // this is technically redundant but what if the html code is changed with an error, this prevents problems
         $role = stripslashes($_REQUEST['role']);
         $role = mysqli_real_escape_string($conn, $role);
