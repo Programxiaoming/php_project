@@ -33,7 +33,7 @@
 			</a>
 			<a href="read_topics.php">
 				<br>
-				<span>List topics</span>
+				<span>List Topics</span>
 			</a>
 		</div>
 <?php include( ROOT_PATH . '/includes/footer.php') ?>
