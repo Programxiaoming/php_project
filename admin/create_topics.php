@@ -46,7 +46,9 @@ if (!preg_match("/^[a-zA-Z._-]{2,200}$/", $slug)) {
 
 ?>
 <!-- added html tag and title -->
- <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+ <?php require_once( ROOT_PATH . '/includes/header.php') ?>
+ <link rel="stylesheet" href="../static/css/public_styling.css">
+ <?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 	 	
 <title>Add Topic </title>
 </head>
 <body>
@@ -70,13 +72,11 @@ if (!preg_match("/^[a-zA-Z._-]{2,200}$/", $slug)) {
     <p><input name="submit" type="submit" value="Submit" /></p>
 
     </form> 
-  </div>
  
   <!-- Sorry this is inconsistent with the other pages so I put at the top instead --> 
    <!-- a BACK button to go to the home page -->
   <!-- <div class="container text-center mt-5">
     <a href="../index.php" class="btn btn-warning mt-5"> Back to homepage </a>
   <div> -->
-</body>
-</html>
+  <?php include( ROOT_PATH . '/includes/footer.php') ?>
  

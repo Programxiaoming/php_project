@@ -2,8 +2,10 @@
 <?php
 include "../config.php"
 ?>
-<!-- improved the doc by including the head_section file -->
-<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+<!-- improved the doc by including the header.php file -->
+<?php require_once( ROOT_PATH . '/includes/header.php') ?>
+<link rel="stylesheet" href="../static/css/public_styling.css"> 
+<?php include( ROOT_PATH . '/admin/nav_admin.php'); ?>
 <title>View Topics</title>
 </head>
 <body>
@@ -51,6 +53,4 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <?php $count++; } ?>
 </tbody>
 </table>
-</div>
-</body>
-</html>
+<?php include( ROOT_PATH . '/includes/footer.php') ?>

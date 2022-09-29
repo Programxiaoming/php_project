@@ -4,7 +4,7 @@
 
 <?php require_once('includes/header.php') ?>
 
-<title>PHP blog | Sign up </title>
+<title>Random Team blog | Sign up </title>
 </head>
 <body>
 <div class="container">
@@ -27,7 +27,5 @@
 		</form>
 	</div>
 </div>
-<!-- // container -->
-<!-- Footer -->
+
 	<?php include( ROOT_PATH . '/includes/footer.php'); ?>
-<!-- // Footer -->

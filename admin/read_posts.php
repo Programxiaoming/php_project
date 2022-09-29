@@ -2,9 +2,11 @@
 <?php
 include "../config.php"
 ?>
-<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+<!-- improved the doc by including the header.php file -->
+<?php require_once( ROOT_PATH . '/includes/header.php') ?>
 <title>View Posts</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../static/css/public_styling.css"> 
+<?php include( ROOT_PATH . '/admin/nav_admin.php'); ?>
 </head>
 <body>
 <div class="form">
@@ -55,8 +57,4 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 </td>
 </tr>
 <?php  } ?>
-</tbody>
-</table>
-</div>
-</body>
-</html>
+<?php include( ROOT_PATH . '/includes/footer.php') ?>

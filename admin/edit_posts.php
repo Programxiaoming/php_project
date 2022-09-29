@@ -11,7 +11,8 @@ $row = mysqli_fetch_assoc($result);
 <head>
 <meta charset="utf-8">
 <title>Update Posts</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../static/css/public_styling.css"> 
+<?php include( ROOT_PATH . '/admin/nav_admin.php'); ?>
 </head>
 <body>
 <div class="form">
@@ -85,6 +86,4 @@ required value="<?php echo $row['updated_at'];?>" /></p>
 </form>
 <?php } ?>
 </div>
-</div>
-</body>
-</html>
+<?php include( ROOT_PATH . '/includes/footer.php') ?>

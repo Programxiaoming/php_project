@@ -1,14 +1,10 @@
 <?php  include('../config.php'); ?>
-
-	<title>Admin | Dashboard</title>
+<link rel="stylesheet" href="../static/css/public_styling.css">
+<?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 	
+<title>Admin | Dashboard</title>
 </head>
 <body>
 	<div class="header">
-		<div class="logo">
-			<a href="../index.php">
-				<h1>Random Team Blog - Home</h1>
-			</a>
-		</div>
 		<?php if (isset($_SESSION['user'])): ?>
 			<div class="user-info">
 				<span><?php echo $_SESSION['user']['username'] ?></span> &nbsp; &nbsp; 
@@ -34,6 +30,4 @@
 			<a href="read_users.php">List Users</a>
 			<a href="read_posts.php">List Posts</a>
 		</div>
-	</div>
-</body>
-</html>
+<?php include( ROOT_PATH . '/includes/footer.php') ?>

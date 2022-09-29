@@ -11,12 +11,10 @@
 </head>
 <body>
 <div class="container">
-	<!-- Navbar -->
 		<?php include( ROOT_PATH . '/includes/navbar.php'); ?>
-	<!-- // Navbar -->
 	
 	<div class="content" >
-		<!-- Page wrapper -->
+
 		<div class="post-wrapper">
 			<!-- full post div -->
 			<div class="full-post-div">
@@ -29,14 +27,9 @@
 				</div>
 			<?php endif ?>
 			</div>
-			<!-- // full post div -->
-			
-			<!-- comments section -->
-			<!--  coming soon ...  -->
-		</div>
-		<!-- // Page wrapper -->
 
-		<!-- post sidebar -->
+		</div>
+
 		<div class="post-sidebar">
 			<div class="card">
 				<div class="card-header">
@@ -52,7 +45,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- // post sidebar -->
+
 	</div>
 </div>
 <!-- // content -->

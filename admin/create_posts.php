@@ -1,8 +1,9 @@
 <!-- Header -->
  <?php  include "../config.php" ?> 
-
-	
-
+<!-- improved the doc by including the header.php file -->
+<?php require_once( ROOT_PATH . '/includes/header.php') ?>
+<link rel="stylesheet" href="../static/css/public_styling.css">
+<?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 	
 <?php 
   if(isset($_POST['user_id'])) 
     {
@@ -37,6 +38,7 @@
  
 <h1 class="text-center">Add Post details </h1>
   <div class="container">
+
     <form action="" method="post">
     
     <p><input type="int" name="user_id" placeholder="User ID" required /></p>
@@ -63,4 +65,4 @@
     <a href="../index.php" class="btn btn-warning mt-5"> Back to homepage </a>
   <div>
  
-  
+  <?php include( ROOT_PATH . '/includes/footer.php') ?>

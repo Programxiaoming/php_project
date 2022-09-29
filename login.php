@@ -1,13 +1,12 @@
 <?php  include('config.php'); ?>
 <?php  include('includes/registration_login.php'); ?>
 <?php require_once('includes/header.php') ?>
-<title>PHP | Sign in </title>
+<title>Random Team Blog | Sign in </title>
 </head>
 <body>
 <div class="container">
-	<!-- Navbar -->
+
 	<?php include( ROOT_PATH . '/includes/navbar.php'); ?>
-	<!-- // Navbar -->
 
 	<div style="width: 40%; margin: 20px auto;">
 		<form method="post" action="login.php" >
@@ -22,8 +21,5 @@
 		</form>
 	</div>
 </div>
-<!-- // container -->
 
-<!-- Footer -->
 	<?php include( ROOT_PATH . '/includes/footer.php'); ?>
-<!-- // Footer -->

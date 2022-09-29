@@ -11,7 +11,9 @@ $result = mysqli_query($conn, $query) or die ( mysqli_error($conn));
 $row = mysqli_fetch_assoc($result);
 }
 ?>
-<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+<?php require_once( ROOT_PATH . '/includes/header.php') ?>
+<link rel="stylesheet" href="../static/css/public_styling.css">
+<?php include( ROOT_PATH . '/admin/nav_admin.php'); ?> 
 <title>Update Topic</title>
 </head>
 <body>
@@ -71,6 +73,4 @@ required value="<?php echo $row['slug'];?>" /></p>
 </form>
 <?php } ?>
 </div>
-</div>
-</body>
-</html>
+<?php include( ROOT_PATH . '/includes/footer.php') ?>

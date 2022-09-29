@@ -8,14 +8,13 @@
 		$posts = getPublishedPostsByTopic($topic_id);
 	}
 ?>
-	<title>LifeBlog | Home </title>
+	<title>Random Team Blog | Home </title>
 </head>
 <body>
 <div class="container">
-<!-- Navbar -->
+
 	<?php include( ROOT_PATH . '/includes/navbar.php'); ?>
-<!-- // Navbar -->
-<!-- content -->
+
 <div class="content">
 	<h2 class="content-title">
 		Articles on <u><?php echo getTopicNameById($topic_id); ?></u>
@@ -36,10 +35,7 @@
 		</div>
 	<?php endforeach ?>
 </div>
-<!-- // content -->
-</div>
-<!-- // container -->
 
-<!-- Footer -->
-	<?php include( ROOT_PATH . '/includes/footer.php'); ?>
-<!-- // Footer -->
+</div>
+
+<?php include( ROOT_PATH . '/includes/footer.php'); ?>
