@@ -44,6 +44,7 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <td align="center"><?php echo $row["slug"]; ?></td>
 <td align="center"><?php echo $row["views"]; ?></td>
 <td align="center"><?php echo $row["image"]; ?></td>
+<td align="center"><?php echo $row["body"]; ?></td>
 <td align="center"><?php echo $row["published"]; ?></td>
 <td align="center"><?php echo $row["created_at"]; ?></td>
 <td align="center"><?php echo $row["updated_at"]; ?></td>
