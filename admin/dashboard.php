@@ -21,6 +21,7 @@
 			<a href="create_topics.php">
 				<br>
 				<span>New Topic</span>
+				<br>
 			</a>
 			<a href="read_users.php">
 				<br>
@@ -29,6 +30,10 @@
 			<a href="read_posts.php">
 				<br>
 				<span>List Posts</span>
+			</a>
+			<a href="read_topics.php">
+				<br>
+				<span>List topics</span>
 			</a>
 		</div>
 <?php include( ROOT_PATH . '/includes/footer.php') ?>
