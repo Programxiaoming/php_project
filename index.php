@@ -7,7 +7,7 @@
 <?php $posts = getPublishedPosts(); ?>
 
 
-	<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+		<link rel="stylesheet" href="static/css/public_styling.css">
 		<title>Random Team Blog| Home </title>
 	</head>
 	<body>
