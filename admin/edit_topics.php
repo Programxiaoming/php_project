@@ -18,7 +18,10 @@ $row = mysqli_fetch_assoc($result);
 </head>
 <body>
 <div class="form">
-
+<p>
+<a href="read_topics.php">View Topics</a> 
+| <a href="create_topics.php">Insert New Topics</a> 
+| <a href="logout.php">Logout</a></p>
 <h1>Update Topic</h1>
 <?php
 $status = $nameErr = $slugErr = "";

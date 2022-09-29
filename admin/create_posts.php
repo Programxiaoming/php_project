@@ -21,10 +21,6 @@ if (isset($_POST['user_id'])) {
     if (!preg_match("/[A-Z][a-z]*(\s[A-Z][a-z]*)*/", $title) && strlen($title) > 1) {
       $titleErr = "Title must start with a capital letter and be greater than 1 character";
     }
-?>
- 
-<h1 class="post_header">Create a new post </h1>
-  <div class="post">
 
     $slug = stripslashes($_REQUEST["slug"]);
     $slug = mysqli_real_escape_string($conn, $slug);
@@ -96,15 +92,20 @@ if (isset($_POST['user_id'])) {
     <input type="hidden" name="MAX_FILE_SIZE" value="2048000" />
     <p><input type="file" name="image" placeholder="Enter image" accept="image/x-png,image/gif,image/jpeg" required /></p>
 
-    <div class="post_body">
-    <p><input type="text" name="body" style="border-style:none" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec finibus mauris..." required /></p>
-    </div>
-    <p><input type="tinyint" name="published" placeholder="Published" required /></p>
-    <div class="btn_sub">
-    <p><input name="submit" type="submit" value="Create" /></p>
-    </div>
-    </form> 
-  </div>
- 
- 
-  <?php include( ROOT_PATH . '/includes/footer.php') ?>
+    <p><input type="text" name="body" placeholder="Body" required /></p>
+    <span class="error"> <?php echo $bodyErr; ?></span><br>
+
+    <p><input type="number" name="published" placeholder="Published" maxlength="1" required /></p>
+    <span class="error"> <?php echo $publishedErr; ?></span><br>
+
+    <p><input name="submit" type="submit" value="Submit" /></p>
+
+  </form>
+</div>
+
+<!-- a BACK button to go to the home page -->
+<div class="container text-center mt-5">
+  <a href="../index.php" class="btn btn-warning mt-5"> Back to homepage </a>
+  <div>
+
+    <?php include(ROOT_PATH . '/includes/footer.php') ?>
