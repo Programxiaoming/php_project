@@ -20,23 +20,17 @@
 		<h1>Welcome</h1>
 		<div class="stats">
 			<a href="create_posts.php" class="first">
-				<span>10</span> <br>
-				<span>New Posts</span>
+				 <br>
+				<span>New Post</span>
 			</a>
 			<a href="create_topics.php">
-				<span>10</span> <br>
-				<span>New Topics</span>
+				<br>
+				<span>New Topic</span>
 			</a>
 
 		</div>
 		<br><br><br>
 		<div class="buttons">
-			<a href="edit_users.php">Edit Users</a>
-			<a href="edit_posts.php">Edit Posts</a>
-			<br>
-			<a href="delete_users.php">Delete Users</a>
-			<a href="delete_posts.php">Delete Posts</a>
-			<br>
 			<a href="read_users.php">List Users</a>
 			<a href="read_posts.php">List Posts</a>
 		</div>

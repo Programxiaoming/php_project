@@ -2,27 +2,30 @@
 <?php
 include "../config.php"
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>users Details</title>
-<link rel="stylesheet" href="css/style.css" />
+<!-- improved the doc by including the head_section file -->
+<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+<title>Users List</title>
 </head>
 <body>
 <div class="form">
-<p><a href="index.php">Home</a> 
-| <a href="logout.php">Logout</a></p>
-<h2>View users</h2>
+
+<!-- fixed these as they were not working  -->
+<p>
+  <!-- added href back to dashboard so that user doesn't get lost !-->
+<a href="dashboard.php"> Dashboard</a>  |
+<a href="../index.php">Home</a> 
+| <a href="../logout.php">Logout</a></p>
+<h2>Users List</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>
 <tr>
-          <th><strong>No</strong></th>    
+          <!-- removed count from here and the code below because we do not need it --> 
           <th  scope="col" >ID</th>
           <th  scope="col">User Name</th>
           <th  scope="col">email</th>
           <th  scope="col"> role</th>
-          <th  scope="col">password</th>
+          <!-- removed password, we don't want to show it to all users 
+          <th  scope="col">password</th> -->
           <th  scope="col">Created_at</th>
           <th  scope="col">Updated_at</th>
         </tr> 
@@ -33,7 +36,7 @@ $count=1;
 $sel_query="Select * from users ORDER BY id;";
 $result = mysqli_query($conn,$sel_query);
 while($row = mysqli_fetch_assoc($result)) { ?>
-<tr><td align="center"><?php echo $count; ?></td>
+<tr>
 
 <td align="center"><?php echo $row["id"]; ?></td>
 <td align="center"><?php echo $row["username"]; ?></td>
@@ -50,7 +53,7 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <a href="delete_users.php?id=<?php echo $row["id"]; ?>">Delete</a>
 </td>
 </tr>
-<?php $count++; } ?>
+<?php } ?>
 </tbody>
 </table>
 </div>
