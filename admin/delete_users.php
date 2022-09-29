@@ -3,8 +3,8 @@
 
 <?php
 
-$id=$_REQUEST['id']; echo 4;
+$id=$_REQUEST['id']; 
 $query = "DELETE FROM users WHERE id=$id"; 
-$result = mysqli_query($conn,$query) or die ( mysqli_error());
-header("Location: read_users.php");  echo 7;
+$result = mysqli_query($conn,$query) or die ( mysqli_error($conn));
+header("Location: read_users.php"); 
 ?>

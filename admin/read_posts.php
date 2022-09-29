@@ -2,25 +2,23 @@
 <?php
 include "../config.php"
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Posts Details</title>
+<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
+<title>View Posts</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 <div class="form">
-<p><a href="index.php">Home</a> 
-| <a href="create_posts.php">Insert New Posts</a> 
-| <a href="logout.php">Logout</a></p>
+<p>
+<a href="dashboard.php"> Dashboard</a> | 
+<a href="../index.php">Home</a> |   
+<a href="create_posts.php">Insert New Post</a> 
+| <a href="../logout.php">Logout</a></p>
 <h2>View Posts</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>
 <tr>
-          <th><strong>No</strong></th>
           <th  scope="col" >ID</th>
-          <th  scope="col">Use ID</th>
+          <th  scope="col">User ID</th>
           <th  scope="col">Title</th>
           <th  scope="col"> Slug</th>
           <th  scope="col">Views</th>
@@ -33,11 +31,10 @@ include "../config.php"
 </thead>
 <tbody>
 <?php
-$count=1;
 $sel_query="Select * from posts ORDER BY id;";
 $result = mysqli_query($conn,$sel_query);
 while($row = mysqli_fetch_assoc($result)) { ?>
-<tr><td align="center"><?php echo $count; ?></td>
+<tr>
 
 <td align="center"><?php echo $row["id"]; ?></td>
 <td align="center"><?php echo $row["user_id"]; ?></td>
@@ -57,7 +54,7 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <a href="delete_posts.php?id=<?php echo $row["id"]; ?>">Delete</a>
 </td>
 </tr>
-<?php $count++; } ?>
+<?php  } ?>
 </tbody>
 </table>
 </div>
