@@ -96,7 +96,6 @@ if (isset($_POST['user_id'])) {
     <input type="hidden" name="MAX_FILE_SIZE" value="2048000" />
     <p><input type="file" name="image" placeholder="Enter image" accept="image/x-png,image/gif,image/jpeg" required /></p>
 
-<<<<<<< HEAD
     <div class="post_body">
     <p><input type="text" name="body" style="border-style:none" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec finibus mauris..." required /></p>
     </div>
@@ -109,11 +108,7 @@ if (isset($_POST['user_id'])) {
  
  
   <?php include( ROOT_PATH . '/includes/footer.php') ?>
-=======
-    <p><input type="text" name="body" placeholder="Body" required /></p>
-    <span class="error"> <?php echo $bodyErr; ?></span><br>
 
-    <p><input type="number" name="published" placeholder="Published" maxlength="1" required /></p>
     <span class="error"> <?php echo $publishedErr; ?></span><br>
 
     <p><input name="submit" type="submit" value="Submit" /></p>
