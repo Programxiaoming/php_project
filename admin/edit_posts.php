@@ -3,7 +3,7 @@
 <?php
 $id=$_REQUEST['id'];
 $query = "SELECT * from posts where id='".$id."'"; 
-$result = mysqli_query($conn, $query) or die ( mysqli_error());
+$result = mysqli_query($conn, $query) or die ( mysqli_error($conn));
 $row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
