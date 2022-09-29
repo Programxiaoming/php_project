@@ -5,7 +5,7 @@
 <body>
 	<div class="header">
 		<div class="logo">
-			<a href="<?php echo BASE_URL .'index.php' ?>">
+			<a href="../index.php">
 				<h1>Random Team Blog - Home</h1>
 			</a>
 		</div>
