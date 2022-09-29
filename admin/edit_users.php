@@ -62,23 +62,23 @@ if(isset($_POST['new']) && $_POST['new']==1)
         // this is technically redundant but what if the html code is changed with an error, this prevents problems
         $role = stripslashes($_REQUEST['role']);
         $role = mysqli_real_escape_string($conn, $role);
-        if ($role != "Author" || $role!="Admin") {
+        if ($role !== "Author" && $role!=="Admin") {
                 $roleErr = "Please respect the HTML document provided";
         }
 
-        $created_at = $_REQUEST['created_at'];
+        // $created_at = $_REQUEST['created_at'];
         $updated_at = date("Y-m-d H:i:s");
 
         //if no errors insert into db
-        if (empty($usernameErr) && empty($emailErr) && empty($passwordErr) && empty($retypedErr) && empty($roleErr)) {
+       
+        if (empty($usernameErr) && empty($emailErr) && empty($roleErr)) {
 
         //do not allow to change password 
-$update="update users set id='".$id."', username='".$username."', email='".$email."',
-role='".$role."',
-created_at='".$created_at."', updated_at='".$updated_at."' where id='".$id."'";
-                        
+$update="update users set username='".$username."', email='".$email."',
+role='".$role."', updated_at='".$updated_at."' where id='".$id."'";
+                      
 mysqli_query($conn, $update) or die(mysqli_error($conn)); 
-$status = "users Updated Successfully. </br></br>
+$status = "Users Updated Successfully. </br></br>
 <a href='read_users.php'>View Updated users</a>";
 echo '<p style="color:#FF0000;">'.$status.'</p>';
         }
@@ -86,7 +86,7 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 ?>
 
 <div>
-<form name="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"> 
+<form name="form"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" > 
 <input type="hidden" name="new" value="1" />
 
 <input name="id" type="hidden" value="<?php echo $row['id'];?>" />
@@ -103,8 +103,8 @@ required value="<?php echo $row['email'];?>" /></p>
 
 
 <select title="role" name="role">
-                                <option selected>Admin</option>
-                                <option>Author</option>
+                                <option value='Admin'selected>Admin</option>
+                                <option value='Author'>Author</option>
                         </select>
                         <span class="error"> <?php echo $roleErr; ?></span><br>
 
