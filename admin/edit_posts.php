@@ -10,23 +10,22 @@ if (!is_numeric($id) || $id < 1) {
     $row = mysqli_fetch_assoc($result);
 }
 ?>
-<?php require_once(ROOT_PATH . '/includes/header.php') ?>
-<title>Update Post</title>
-<link rel="stylesheet" href="../static/css/public_styling.css">
-<?php include(ROOT_PATH . '/admin/nav_admin.php'); ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Update Posts</title>
+<link rel="stylesheet" href="css/admin_styling.css">
+<?php include( ROOT_PATH . '/admin/nav_admin.php'); ?>
 </head>
 
 <body>
-    <div class="form">
-        <p>
-            <a href="read_posts.php">Back</a>
-            | <a href="create_posts.php">Insert New posts</a>
-            | <a href="logout.php">Logout</a>
-        </p>
-        <h1>Update Post</h1>
-        <?php
-        $status = $titleErr = $viewsErr = $slugErr  = $bodyErr = $publishedErr =  "";
-        if (isset($_POST['new']) && $_POST['new'] == 1) {
+<div class="form">
+<h1>Update posts</h1>
+<?php
+$status = "";
+if(isset($_POST['new']) && $_POST['new']==1)
+{
 
             $user_id = stripslashes($_REQUEST["user_id"]);
             $user_id = mysqli_real_escape_string($conn, $user_id);

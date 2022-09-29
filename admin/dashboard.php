@@ -7,8 +7,7 @@
 	<div class="header">
 		<?php if (isset($_SESSION['user'])): ?>
 			<div class="user-info">
-				<span><?php echo $_SESSION['user']['username'] ?></span> &nbsp; &nbsp; 
-				<a href="../logout.php" class="logout-btn">logout</a>
+				<span>Welcome <?php echo $_SESSION['user']['username'] ?></span> &nbsp; &nbsp; 
 			</div>
 		<?php endif ?>
 	</div>

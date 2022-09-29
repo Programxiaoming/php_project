@@ -136,3 +136,54 @@ form input:focus {
     margin: 20px 10%;
     padding: 20px 20px;  
   }
+
+  .form {
+    font-size: 1em;
+    font-family: 'Tangerine';
+    left: 0;
+    right:0;
+    color: black;
+    background-color: antiquewhite;
+    text-align: left;
+    width: 75%;
+    margin: 20px 10%;
+    padding: 20px 20px;  
+  }
+
+  .post_header {
+    font-size: 1.5em;
+    font-family: 'Tangerine' cursive;
+    left: 0;
+    right:0;
+    color: black;
+    background-color: antiquewhite;
+    text-align: left;
+    width: 15%;
+    margin: 20px 10%;
+    padding: 20px 20px;  
+  }
+
+  .post {
+    width: 20%;
+    margin: 10px 10%;
+
+    }
+
+  .post_body {
+    width: 750px;
+    height: 200px;
+    border-top-width:1px;
+    border-right-width:1px;
+    border-bottom-width:1px;
+    border-left-width:1px;
+    border-top-style:solid;
+    border-right-style:solid;
+    border-bottom-style:solid;
+    border-left-style:solid;
+    }
+
+    .btn_sub {
+        width: 25%;
+        margin: 1px 40%;
+        background-color:darkgrey;
+        }
