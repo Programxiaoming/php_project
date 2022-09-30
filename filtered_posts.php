@@ -17,7 +17,7 @@
 
 <div class="content">
 	<h2 class="content-title">
-		Articles on <u><?php echo getTopicNameById($topic_id); ?></u>
+		Post Topic on <u><?php echo getTopicNameById($topic_id); ?></u>
 	</h2>
 	<hr>
 	<?php foreach ($posts as $post): ?>
