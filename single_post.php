@@ -7,7 +7,7 @@
 	$topics = getAllTopics();
 ?>
 <?php require_once('includes/header.php') ?>
-<title> <?php echo $post['title'] ?> | LifeBlog</title>
+<title> <?php echo $post['title'] ?> | Random Team Blog</title>
 
 <script defer>
         
