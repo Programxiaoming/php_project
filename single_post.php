@@ -8,6 +8,23 @@
 ?>
 <?php require_once('includes/header.php') ?>
 <title> <?php echo $post['title'] ?> | LifeBlog</title>
+
+<script defer>
+        
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '3a7d8e9504msh2a768cbd016e773p1cb514jsn7169f596af56',
+		'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+	}
+};
+
+fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
+	.then(response => response.json())
+	.then(response => document.getElementById("quote").innerHTML = response.content)
+	.catch(err => console.error(err));
+
+</script>
 </head>
 <body>
 <div class="container">
@@ -47,6 +64,7 @@
 		</div>
 
 	</div>
+	<div class="content" id="quote">Quote Will Appear Shortly</div>
 </div>
 <!-- // content -->
 
